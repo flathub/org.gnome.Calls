@@ -131,7 +131,7 @@
                 {
                     "type" : "shell",
                     "commands" : [
-                        "sed -i -e 's/\${\${NAME}_BIN}-NOTFOUND/\${NAME}_BIN-NOTFOUND/' cpp/CMakeLists.txt"
+                        "sed -i -e 's/\\${\\${NAME}_BIN}-NOTFOUND/\\${NAME}_BIN-NOTFOUND/' cpp/CMakeLists.txt"
                     ]
                 },
                 {
