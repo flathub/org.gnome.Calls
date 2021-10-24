@@ -10,11 +10,11 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --system-talk-name=org.freedesktop.ModemManager1
+  - --system-talk-name=org.mobian_project.CallAudio.EnableSpeaker
   - --talk-name=org.gnome.evolution.dataserver.AddressBook10
   - --talk-name=org.gnome.evolution.dataserver.Sources5
   - --talk-name=im.pidgin.purple.PurpleService
   - --talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*
-  - --talk-name=org.mobian_project.CallAudio.EnableSpeaker
 cleanup:
   - /include
   - /lib/pkgconfig
