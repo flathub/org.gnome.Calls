@@ -183,3 +183,5 @@ modules:
         url: https://gitlab.gnome.org/GNOME/calls.git
         tag: "41.1"
         commit: 7b45de69df5a5312f702d79a23ae5e87979857ef
+      - type: patch
+        path: calls-appdata.patch

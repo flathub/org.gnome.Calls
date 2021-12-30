@@ -1,0 +1,13 @@
+diff --git a/data/org.gnome.Calls.metainfo.xml b/data/org.gnome.Calls.metainfo.xml
+index f4c2fb3..caa8559 100644
+--- a/data/org.gnome.Calls.metainfo.xml
++++ b/data/org.gnome.Calls.metainfo.xml
+@@ -62,7 +62,7 @@
+     <content_rating type="oars-1.1"/>
+ 
+     <releases>
+-      <release version="41.1" data="2021-10-30">
++      <release version="41.1" date="2021-10-30">
+         <description>
+           <p>
+             GNOME Calls 41.1 release brings updated translations, fixes for the
