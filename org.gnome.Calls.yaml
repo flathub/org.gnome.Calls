@@ -164,8 +164,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/folks.git
-        tag: 0.15.4
-        commit: 08c981563112d9def156286033e8c82a937d7fc6
+        tag: 0.15.5
+        commit: c75c2a55f171ec778a78d3d510add6993b353487
   - name: feedbackd
     buildsystem: meson
     config-opts:
