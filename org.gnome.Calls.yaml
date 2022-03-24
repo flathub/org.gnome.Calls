@@ -41,6 +41,7 @@ modules:
         url: https://www.freedesktop.org/software/ModemManager/ModemManager-1.18.6.tar.xz
         sha256: d4f804b31cf504239c5f1d4973c62095c00cba1ee9abb503718dac6d146a470a
   - name: gsound
+    buildsystem: meson
     sources:
       - type: archive
         url: https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz
@@ -163,8 +164,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/folks.git
-        tag: 0.15.4
-        commit: 08c981563112d9def156286033e8c82a937d7fc6
+        tag: 0.15.5
+        commit: c75c2a55f171ec778a78d3d510add6993b353487
   - name: feedbackd
     buildsystem: meson
     config-opts:
@@ -192,4 +193,4 @@ modules:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
         tag: "42.0"
-        commit: 778f3567f21598aa6ca14bd1e67a7140ef0a1b57
+        commit: 818757d918b37a50727ac10976d9891070e70f22
