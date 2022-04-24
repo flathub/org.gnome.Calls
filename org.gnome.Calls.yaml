@@ -1,6 +1,6 @@
 app-id: org.gnome.Calls
 runtime: org.gnome.Platform
-runtime-version: "42"
+runtime-version: '42'
 sdk: org.gnome.Sdk
 command: gnome-calls
 finish-args:
@@ -39,19 +39,19 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: "1.18.6"
+        tag: 1.18.6
         commit: a7bcf2036b34d5043dbc33fee7d98bae5859c4d3
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
           #version-scheme: semantic
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
   - name: gsound
     buildsystem: meson
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/gsound.git
-        tag: "1.0.3"
+        tag: 1.0.3
         commit: 95d36d60cf53e0e7c5d5325e0f1f4fc765a611ae
         x-checker-data:
           type: git
@@ -63,11 +63,11 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/libpeas.git
-        tag: "libpeas-1.30.0"
+        tag: libpeas-1.30.0
         commit: 1d50694f770b12e1e7447d2c606a1e46533e34b7
         x-checker-data:
           type: git
-          tag-pattern: "^libpeas-([\\d.]+)$"
+          tag-pattern: ^libpeas-([\d.]+)$
           # NOTE tag libpeas-1.23.90.1 is not semantic versioning
           #version-scheme: semantic
   - name: boost
@@ -75,11 +75,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/boostorg/boost.git
-        tag: "boost-1.72.0"
+        tag: boost-1.72.0
         commit: 789155d431930ebef4766550ed7bd09f62eac714
         x-checker-data:
           type: git
-          tag-pattern: "^boost-([\\d.]+)$"
+          tag-pattern: ^boost-([\d.]+)$
           version-scheme: semantic
     build-commands:
       - ./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=date_time,thread,system
@@ -94,11 +94,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/googletest.git
-        tag: "release-1.8.0"
+        tag: release-1.8.0
         commit: ec44c6c1675c25b9827aacd08c02433cccde7780
         x-checker-data:
           type: git
-          tag-pattern: "^release-([\\d.]+)$"
+          tag-pattern: ^release-([\d.]+)$
           version-scheme: semantic
   - name: protobuf
     cleanup:
@@ -109,11 +109,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: "v3.6.1"
+        tag: v3.6.1
         commit: 48cb18e5c419ddd23d9badcfe4e9df7bde1979b2
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
           # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
           #version-scheme: semantic
   - name: cmocka
@@ -122,17 +122,17 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cmocka/cmocka.git
-        tag: "cmocka-1.1.5"
+        tag: cmocka-1.1.5
         commit: f5e2cd77c88d9f792562888d2b70c5a396bfbf7a
         x-checker-data:
           type: git
-          tag-pattern: "^cmocka-([\\d.]+)$"
+          tag-pattern: ^cmocka-([\d.]+)$
   - name: libphonenumber
     buildsystem: cmake-ninja
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: "v8.10.16"
+        tag: v8.10.16
         commit: b0daf7ba45f0e8dac582b88634127e3f9671a587
         x-checker-data:
           type: git
@@ -158,13 +158,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/libical/libical.git
-        tag: "v3.0.14"
+        tag: v3.0.14
         commit: 098fb68688b853410daed96812a6fe0a22e0e15f
         x-checker-data:
           type: git
           # NOTE tag v0.48 is not semantic versioning...
           #version-scheme: semantic
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
   - shared-modules/intltool/intltool-0.51.json
   - name: evolution-data-server
     cleanup:
@@ -189,13 +189,13 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: "3.43.2"
+        tag: 3.43.2
         commit: 6c5457959eaeeef7b9e61f1a75a31c8d651d77b0
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
           #version-scheme: semantic
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
   - name: gom
     buildsystem: meson
     config-opts:
@@ -203,11 +203,11 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/gom.git
-        tag: "0.4"
+        tag: '0.4'
         commit: 26816b74a29b9d2d8dc169ed2f9649a4a159bc7c
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
   - name: folks
     buildsystem: meson
     cleanup:
@@ -220,13 +220,13 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/folks.git
-        tag: "0.15.5"
+        tag: 0.15.5
         commit: c75c2a55f171ec778a78d3d510add6993b353487
         x-checker-data:
           type: git
           # NOTE tag 0.14 is not semantic versioning...
           #version-scheme: semantic
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
   - name: feedbackd
     buildsystem: meson
     config-opts:
@@ -234,17 +234,17 @@ modules:
     sources:
       - type: git
         url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: "v0.0.0+git20220208"
+        tag: v0.0.0+git20220208
         commit: 74b178a363f1e0e4b84309f2a1b1c1c41bf97248
         x-checker-data:
           type: git
-          tag-pattern: "^v0\\.0\\.0\\+git([\\d]{8})$"
+          tag-pattern: ^v0\.0\.0\+git([\d]{8})$
   - name: callaudiod
     buildsystem: meson
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: "0.1.3"
+        tag: 0.1.3
         commit: 4cb8bd9d228d13ea67e79f4c37c674f412b32d20
         x-checker-data:
           type: git
@@ -254,7 +254,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: "v1.13.2"
+        tag: v1.13.2
         commit: 33974b9bd24c2a25d514b3d5372263115f28c525
         x-checker-data:
           type: git
@@ -265,9 +265,9 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: "42.0"
+        tag: '42.0'
         commit: 818757d918b37a50727ac10976d9891070e70f22
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
           is-main-source: true
