@@ -155,7 +155,7 @@ modules:
       # BUG https://github.com/google/libphonenumber/pull/2763
       - type: git
         url: https://github.com/abseil/abseil-cpp.git
-        tag: 20211102.0
+        tag: '20211102.0'
         commit: 215105818dfde3174fe799600bb0f3cae233d0bf
         x-checker-data:
           type: git
