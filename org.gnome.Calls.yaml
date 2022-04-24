@@ -135,8 +135,8 @@ modules:
       - type: git
         url: https://github.com/google/libphonenumber.git
         # Using last release before introducing dependencies on absl: https://github.com/google/libphonenumber/commit/874af793779ee58b64d4d7dc302562751b33e58d
-        tag: v8.12.39
-        commit: b4e9b73792be6c9c5aeb6bc560dd95ab64623d4f
+        tag: v8.12.47
+        commit: e43c69d31a1d55391f16a31823482293d7f94703
         x-checker-data:
           type: git
           version-scheme: semantic
