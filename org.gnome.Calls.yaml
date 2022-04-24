@@ -63,8 +63,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/libpeas.git
-        tag: libpeas-1.30.0
-        commit: 1d50694f770b12e1e7447d2c606a1e46533e34b7
+        tag: libpeas-1.32.0
+        commit: 41335bc31cb3e5ec75196e621bb244ca4d96f151
         x-checker-data:
           type: git
           tag-pattern: ^libpeas-([\d.]+)$
@@ -75,8 +75,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/boostorg/boost.git
-        tag: boost-1.72.0
-        commit: 789155d431930ebef4766550ed7bd09f62eac714
+        tag: boost-1.79.0
+        commit: 5df8086b733798c8e08e316626a16babe11bd0d2
         x-checker-data:
           type: git
           tag-pattern: ^boost-([\d.]+)$
@@ -94,8 +94,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/googletest.git
-        tag: release-1.8.0
-        commit: ec44c6c1675c25b9827aacd08c02433cccde7780
+        tag: release-1.11.0
+        commit: e2239ee6043f73722e7aa812a459f54a28552929
         x-checker-data:
           type: git
           tag-pattern: ^release-([\d.]+)$
@@ -109,8 +109,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v3.6.1
-        commit: 48cb18e5c419ddd23d9badcfe4e9df7bde1979b2
+        tag: v3.20.1
+        commit: 21027a27c4c2ec1000859ccbcfff46d83b16e1ed
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -129,17 +129,21 @@ modules:
           tag-pattern: ^cmocka-([\d.]+)$
   - name: libphonenumber
     buildsystem: cmake-ninja
+    config-opts:
+      - -DREGENERATE_METADATA=OFF
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.10.16
-        commit: b0daf7ba45f0e8dac582b88634127e3f9671a587
+        # Using last release before introducing dependencies on absl: https://github.com/google/libphonenumber/commit/874af793779ee58b64d4d7dc302562751b33e58d
+        tag: v8.12.39
+        commit: b4e9b73792be6c9c5aeb6bc560dd95ab64623d4f
         x-checker-data:
           type: git
           version-scheme: semantic
       - type: shell
         commands:
           - sed -i -e 's/\${\${NAME}_BIN}-NOTFOUND/\${NAME}_BIN-NOTFOUND/' cpp/CMakeLists.txt
+      # See https://github.com/google/libphonenumber/pull/2762
       - type: patch
         path: fix-libphonenumber-build.patch
     subdir: cpp
@@ -189,8 +193,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.43.2
-        commit: 6c5457959eaeeef7b9e61f1a75a31c8d651d77b0
+        tag: 3.44.1
+        commit: 3f9d74ba18bb752877887579243eb3b7af98f211
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -244,8 +248,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.3
-        commit: 4cb8bd9d228d13ea67e79f4c37c674f412b32d20
+        tag: 0.1.4
+        commit: a7ca6ce9d4c947f19c3f99ff2cab986c64434e57
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -254,8 +258,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.2
-        commit: 33974b9bd24c2a25d514b3d5372263115f28c525
+        tag: v1.13.7
+        commit: 1607ade8b6d1c4f82379c7489e7573a769b61994
         x-checker-data:
           type: git
           version-scheme: semantic
