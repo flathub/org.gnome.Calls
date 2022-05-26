@@ -112,8 +112,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v3.20.1
-        commit: 21027a27c4c2ec1000859ccbcfff46d83b16e1ed
+        tag: v21.0
+        commit: 7062d0a2d0075d5e7d5c294fd3984df67a976da3
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.12.48
-        commit: 4e7922d02168a52963d24756a8ce21c999d7b42e
+        tag: v8.12.49
+        commit: 0815b3b998112cd1906dc16308dc39141f8307fd
         x-checker-data:
           type: git
           version-scheme: semantic
