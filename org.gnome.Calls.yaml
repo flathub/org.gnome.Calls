@@ -112,8 +112,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v3.20.1
-        commit: 21027a27c4c2ec1000859ccbcfff46d83b16e1ed
+        tag: v21.1
+        commit: e73ed1630fdec85d7fb513c166629ed49cd4eb18
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.12.48
-        commit: 4e7922d02168a52963d24756a8ce21c999d7b42e
+        tag: v8.12.49
+        commit: 0815b3b998112cd1906dc16308dc39141f8307fd
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -208,8 +208,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.44.1
-        commit: 3f9d74ba18bb752877887579243eb3b7af98f211
+        tag: 3.44.2
+        commit: e01c792d9a1e0d2a798efdbe108a8057c141e001
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
