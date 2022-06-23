@@ -94,8 +94,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/googletest.git
-        tag: release-1.11.0
-        commit: e2239ee6043f73722e7aa812a459f54a28552929
+        tag: release-1.12.0
+        commit: 15460959cbbfa20e66ef0b5ab497367e47fc0a04
         # Disable shallow clone as this repo will be reused for submodule of protobuf
         # BUG https://github.com/flathub/flathub/issues/3067
         disable-shallow-clone: true
