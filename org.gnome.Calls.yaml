@@ -75,8 +75,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/boostorg/boost.git
-        tag: boost-1.79.0
-        commit: 5df8086b733798c8e08e316626a16babe11bd0d2
+        tag: boost-1.80.0
+        commit: 32da69a36f84c5255af8a994951918c258bac601
         x-checker-data:
           type: git
           tag-pattern: ^boost-([\d.]+)$
@@ -112,8 +112,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v21.4
-        commit: c9869dc7803eb0a21d7e589c40ff4f9288cd34ae
+        tag: v21.5
+        commit: ab840345966d0fa8e7100d771c92a73bfbadd25c
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -208,8 +208,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.44.2
-        commit: e01c792d9a1e0d2a798efdbe108a8057c141e001
+        tag: 3.45.2
+        commit: 4e35fed4165d150cccba33f85bc93d1da0a714e5
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
