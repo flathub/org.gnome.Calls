@@ -39,8 +39,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.18.10
-        commit: 1338749739e0c01bdbc6ddf92388a781806ec3ac
+        tag: 1.18.12
+        commit: c234bd55c9d9618c1478b5e80aaf4b8f965be181
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.12.54
-        commit: e6ecaf8566bd2aa6f90bb3afdf9a36b7fcb03e98
+        tag: v8.12.55
+        commit: 6e35ecd929cfc81d010d66a3d3e71faffef9dae3
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -155,8 +155,8 @@ modules:
       # BUG https://github.com/google/libphonenumber/pull/2763
       - type: git
         url: https://github.com/abseil/abseil-cpp.git
-        tag: '20220623.0'
-        commit: 273292d1cfc0a94a65082ee350509af1d113344d
+        tag: '20220623.1'
+        commit: 8c0b94e793a66495e0b1f34a5eb26bd7dc672db0
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -208,8 +208,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.44.2
-        commit: e01c792d9a1e0d2a798efdbe108a8057c141e001
+        tag: 3.45.3
+        commit: a65b1b45f40e600493f7cf31fe73659bf842da79
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
