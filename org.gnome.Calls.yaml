@@ -1,6 +1,6 @@
 app-id: org.gnome.Calls
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: gnome-calls
 finish-args:
@@ -16,6 +16,8 @@ finish-args:
   - --talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*
   - --talk-name=org.mobian_project.CallAudio
   - --talk-name=org.sigxcpu.Feedback
+  - --talk-name=org.gtk.vfs.*
+  - --filesystem=xdg-run/gvfsd
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -39,110 +41,43 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.18.10
-        commit: 1338749739e0c01bdbc6ddf92388a781806ec3ac
+        tag: 1.18.12
+        commit: c234bd55c9d9618c1478b5e80aaf4b8f965be181
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
           #version-scheme: semantic
           tag-pattern: ^([\d.]+)$
-  - name: gsound
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/gsound.git
-        tag: 1.0.3
-        commit: 95d36d60cf53e0e7c5d5325e0f1f4fc765a611ae
-        x-checker-data:
-          type: git
-          version-scheme: semantic
-    modules:
-      - shared-modules/libcanberra/libcanberra.json
   - name: libpeas
     buildsystem: meson
+    config-opts:
+      - -Ddemos=false
+      - -Dwidgetry=false
+      - -Dlua51=false
+      - -Dglade_catalog=false
+      - -Dintrospection=false
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/libpeas.git
-        tag: libpeas-1.32.0
-        commit: 41335bc31cb3e5ec75196e621bb244ca4d96f151
+        tag: libpeas-1.34.0
+        commit: 744e16bdada0eb79c37abac328cb4c3dc6dd42df
         x-checker-data:
           type: git
           tag-pattern: ^libpeas-([\d.]+)$
           # NOTE tag libpeas-1.23.90.1 is not semantic versioning
           #version-scheme: semantic
-  - name: boost
-    buildsystem: simple
-    sources:
-      - type: git
-        url: https://github.com/boostorg/boost.git
-        tag: boost-1.80.0
-        commit: 32da69a36f84c5255af8a994951918c258bac601
-        x-checker-data:
-          type: git
-          tag-pattern: ^boost-([\d.]+)$
-          version-scheme: semantic
-    build-commands:
-      - ./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=date_time,thread,system
-      - ./b2 -j ${FLATPAK_BUILDER_N_JOBS} install
-    cleanup:
-      - /share
-      - /bin
-  - name: GTest
-    buildsystem: cmake-ninja
-    cleanup:
-      - '*'
-    sources:
-      - type: git
-        url: https://github.com/google/googletest.git
-        tag: release-1.12.1
-        commit: 58d77fa8070e8cec2dc1ed015d66b454c8d78850
-        # Disable shallow clone as this repo will be reused for submodule of protobuf
-        # BUG https://github.com/flathub/flathub/issues/3067
-        disable-shallow-clone: true
-        x-checker-data:
-          type: git
-          tag-pattern: ^release-([\d.]+)$
-          version-scheme: semantic
-  - name: protobuf
-    cleanup:
-      - protoc
-      - /bin
-      - /doc
-      - /lib/plugins
-    sources:
-      - type: git
-        url: https://github.com/protocolbuffers/protobuf.git
-        tag: v21.5
-        commit: ab840345966d0fa8e7100d771c92a73bfbadd25c
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-          # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
-          #version-scheme: semantic
-  - name: cmocka
-    buildsystem: cmake
-    builddir: true
-    sources:
-      - type: git
-        url: https://gitlab.com/cmocka/cmocka.git
-        tag: cmocka-1.1.5
-        commit: f5e2cd77c88d9f792562888d2b70c5a396bfbf7a
-        x-checker-data:
-          type: git
-          tag-pattern: ^cmocka-([\d.]+)$
   - name: libphonenumber
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_CXX_STANDARD=17
       - -DREGENERATE_METADATA=OFF
+      - -DUSE_BOOST=OFF
       - -DFETCHCONTENT_FULLY_DISCONNECTED=ON
-      - -DFETCHCONTENT_SOURCE_DIR_ABSEIL-CPP=/run/build/libphonenumber/tools/abseil-cpp
-      - -DABSL_PROPAGATE_CXX_STD=ON
-      - -DABSL_ENABLE_INSTALL=ON
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.12.54
-        commit: e6ecaf8566bd2aa6f90bb3afdf9a36b7fcb03e98
+        tag: v8.12.56
+        commit: 222e5a8b3650e8ee56731c042389880a6587e1f9
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -152,16 +87,57 @@ modules:
       # See https://github.com/google/libphonenumber/pull/2762
       - type: patch
         path: fix-libphonenumber-build.patch
-      # BUG https://github.com/google/libphonenumber/pull/2763
-      - type: git
-        url: https://github.com/abseil/abseil-cpp.git
-        tag: '20220623.0'
-        commit: 273292d1cfc0a94a65082ee350509af1d113344d
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
-        dest: tools/abseil-cpp
     subdir: cpp
+    modules:
+      - name: GTest
+        buildsystem: cmake-ninja
+        cleanup:
+          - '*'
+        sources:
+          - type: git
+            url: https://github.com/google/googletest.git
+            tag: release-1.12.1
+            commit: 58d77fa8070e8cec2dc1ed015d66b454c8d78850
+            # Disable shallow clone as this repo will be reused for submodule of protobuf
+            # BUG https://github.com/flathub/flathub/issues/3067
+            disable-shallow-clone: true
+            x-checker-data:
+              type: git
+              tag-pattern: ^release-([\d.]+)$
+              version-scheme: semantic
+      - name: protobuf
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          - -Dprotobuf_BUILD_TESTS=OFF
+        cleanup:
+          - protoc
+          - /bin
+          - /doc
+          - /lib/plugins
+        sources:
+          - type: git
+            url: https://github.com/protocolbuffers/protobuf.git
+            tag: v21.6
+            commit: 24487dd1045c7f3d64a21f38a3f0c06cc4cf2edb
+            x-checker-data:
+              type: git
+              tag-pattern: ^v([\d.]+)$
+              # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
+              #version-scheme: semantic
+      - name: abseil
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DCMAKE_CXX_STANDARD=17
+          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+        sources:
+          - type: git
+            url: https://github.com/abseil/abseil-cpp.git
+            tag: '20220623.1'
+            commit: 8c0b94e793a66495e0b1f34a5eb26bd7dc672db0
+            x-checker-data:
+              type: git
+              tag-pattern: ^([\d.]+)$
   - name: libical
     cleanup:
       - /lib/cmake
@@ -191,6 +167,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DENABLE_PHONENUMBER=ON
+      - -DENABLE_OAUTH2=OFF
       - -DENABLE_DOT_LOCKING=OFF
       - -DENABLE_FILE_LOCKING=fcntl
       - -DENABLE_GOA=OFF
@@ -205,11 +182,14 @@ modules:
       - -DENABLE_GTK_DOC=OFF
       - -DENABLE_EXAMPLES=OFF
       - -DWITH_PHONENUMBER:PATH=/
+      - -DPHONENUMBER_DEFINITIONS=
+      - -DENABLE_CANBERRA=OFF
+      - -DENABLE_DOT_LOCKING=OFF
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.44.2
-        commit: e01c792d9a1e0d2a798efdbe108a8057c141e001
+        tag: 3.46.0
+        commit: ed45e3272a88ea9097a4fe25b5d6bfed4e1272ce
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -273,20 +253,21 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.8
-        commit: 756ab9b5c9370423489e0d6a27166863c7a57fef
+        tag: v1.13.9
+        commit: 58d0ecc235ad07f6d32839b223d092c7412a3f3c
         x-checker-data:
           type: git
           version-scheme: semantic
   - name: calls
     buildsystem: meson
-    builddir: true
+    config-opts:
+      - -Dmanpages=false
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: '42.0'
-        commit: 818757d918b37a50727ac10976d9891070e70f22
+        tag: 'v43.0'
+        commit: fcee1a3b6a03383974d67ca67701eba246a646ae
         x-checker-data:
           type: git
-          tag-pattern: ^([\d.]+)$
+          tag-pattern: ^v([\d.]+)$
           is-main-source: true
