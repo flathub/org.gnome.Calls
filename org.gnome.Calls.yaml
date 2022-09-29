@@ -118,8 +118,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.6
-            commit: 24487dd1045c7f3d64a21f38a3f0c06cc4cf2edb
+            tag: v21.7
+            commit: 54489e95e01882407f356f83c9074415e561db00
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -265,7 +265,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: 'v43.0'
+        tag: v43.0
         commit: fcee1a3b6a03383974d67ca67701eba246a646ae
         x-checker-data:
           type: git
