@@ -150,8 +150,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libical/libical.git
-        tag: v3.0.15
-        commit: 408c598eea3d40c728df4e7dfd78dcdcc132c377
+        tag: v3.0.16
+        commit: 5990fd0ac00ee3f068909ac86aa642c940720150
         x-checker-data:
           type: git
           # NOTE tag v0.48 is not semantic versioning...
