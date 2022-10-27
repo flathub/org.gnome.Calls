@@ -41,13 +41,13 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.18.12
-        commit: c234bd55c9d9618c1478b5e80aaf4b8f965be181
-        #x-checker-data:
-        #  type: git
-        #  # NOTE tag 0.3 is not semantic versioning
-        #  #version-scheme: semantic
-        #  tag-pattern: ^([\d.]+)$
+        tag: 1.20.0
+        commit: d4fcb2a57c978b2ef9d819d32c54c1695582e32b
+        x-checker-data:
+          type: git
+          # NOTE tag 0.3 is not semantic versioning
+          #version-scheme: semantic
+          tag-pattern: ^([\d.]+)$
   - name: libpeas
     buildsystem: meson
     config-opts:
