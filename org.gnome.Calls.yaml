@@ -76,8 +76,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.1
-        commit: af17c578998cd69e0227d0409b07812b43dad34d
+        tag: v8.13.2
+        commit: 48a98da5a8c81710f5b45982e23f82f2c1a1df48
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -240,8 +240,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.4
-        commit: a7ca6ce9d4c947f19c3f99ff2cab986c64434e57
+        tag: 0.1.5
+        commit: 6ac94ccd5c397479292355b4a43e6dc10c8c5558
         x-checker-data:
           type: git
           version-scheme: semantic
