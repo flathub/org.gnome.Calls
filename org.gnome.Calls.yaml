@@ -250,8 +250,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.10
-        commit: 2cb3820d9fa934f96f318c7cea197f54e8c277c7
+        tag: v1.13.11
+        commit: ad508835797e3cb5bc0cd45b9e98869cbf44c868
         x-checker-data:
           type: git
           version-scheme: semantic
