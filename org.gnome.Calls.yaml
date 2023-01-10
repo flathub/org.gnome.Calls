@@ -76,8 +76,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.3
-        commit: 7f6c068beddd2a07165cce1ab3aa3158789fa3ba
+        tag: v8.13.4
+        commit: a27ae9774997a940cbe737a0575c1b870482c473
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -185,8 +185,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.46.2
-        commit: aeaab40a9ec212ed2b82e0ac2ebe1eac0e37d107
+        tag: 3.47.1
+        commit: b3d4b70ad63000bab21b6a77f3d2723e6d400045
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -240,8 +240,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.6
-        commit: a029a5ce7cf77c052a58ee079e74102966428ab9
+        tag: 0.1.7
+        commit: 92cf20a93903fe3d7969f4002643b011011243f7
         x-checker-data:
           type: git
           version-scheme: semantic
