@@ -240,8 +240,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.6
-        commit: a029a5ce7cf77c052a58ee079e74102966428ab9
+        tag: 0.1.7
+        commit: 92cf20a93903fe3d7969f4002643b011011243f7
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -262,8 +262,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v43.2
-        commit: 5fa511c556145e0bdaa6f3eb79a9092965f91f3b
+        tag: v43.3
+        commit: e6d83159c40225f0af3b767b3c78e1710b555d33
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
