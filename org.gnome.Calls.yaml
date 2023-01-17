@@ -47,7 +47,8 @@ modules:
           type: git
           # NOTE tag 0.3 is not semantic versioning
           #version-scheme: semantic
-          tag-pattern: ^([\d.]+)$
+          # NOTE even-stable/odd-unstable versioning scheme
+          tag-pattern: ^(\d+\.\d*[02468]\.\d+)$
   - name: libpeas
     buildsystem: meson
     config-opts:
