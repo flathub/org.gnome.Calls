@@ -41,8 +41,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.20.4
-        commit: 6926459500fd927e7cceb589a9e4113d4edb04e6
+        tag: 1.21.2
+        commit: 2a1851536c3c096ab4e3f26ebe6671b946e665be
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
