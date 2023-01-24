@@ -77,8 +77,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.3
-        commit: 7f6c068beddd2a07165cce1ab3aa3158789fa3ba
+        tag: v8.13.5
+        commit: 5e65be38dca0a5098d4ddd3e1800d8a5c7e3ea87
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -251,8 +251,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.11
-        commit: ad508835797e3cb5bc0cd45b9e98869cbf44c868
+        tag: v1.13.12
+        commit: 74865c96ead0ccfa978a395d1ad0d7f897b0a6c8
         x-checker-data:
           type: git
           version-scheme: semantic
