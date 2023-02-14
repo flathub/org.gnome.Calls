@@ -77,8 +77,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.5
-        commit: 5e65be38dca0a5098d4ddd3e1800d8a5c7e3ea87
+        tag: v8.13.6
+        commit: 4c18a7812fa2076c806857c4e3f470abfac545de
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -186,8 +186,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.47.1
-        commit: b3d4b70ad63000bab21b6a77f3d2723e6d400045
+        tag: 3.47.2
+        commit: 15cad429873d370e64e105a7ed3e5294855b3f4f
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -251,8 +251,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.12
-        commit: 74865c96ead0ccfa978a395d1ad0d7f897b0a6c8
+        tag: v1.13.13
+        commit: dd9803c6db2c05f3cc1736bdf7fca2f5dae100ed
         x-checker-data:
           type: git
           version-scheme: semantic
