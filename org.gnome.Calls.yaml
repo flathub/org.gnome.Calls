@@ -131,8 +131,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/abseil/abseil-cpp.git
-            tag: '20220623.1'
-            commit: 8c0b94e793a66495e0b1f34a5eb26bd7dc672db0
+            tag: '20230125.1'
+            commit: c8a2f92586fe9b4e1aff049108f5db8064924d8e
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
