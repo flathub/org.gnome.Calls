@@ -194,6 +194,9 @@ modules:
           # NOTE tag 3.43.1.1 is not semantic versioning...
           #version-scheme: semantic
           tag-pattern: ^([\d.]+)$
+      # See https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/453
+      - type: patch
+        path: evolution-data-server-cpp-standard.patch
   - name: gom
     buildsystem: meson
     config-opts:
