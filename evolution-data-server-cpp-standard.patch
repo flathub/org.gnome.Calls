@@ -1,0 +1,30 @@
+From 48603b7b04a275e58e900cbd9e02bfec828b8ac4 Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Wed, 15 Feb 2023 17:30:28 +0100
+Subject: [PATCH] I#453 - build: Make it possible to override C++ standard
+
+When the variable is cached, it can be overridden by the caller, thus when
+libraries like libphonenumber require certain version of the C++ standard,
+it can be set from the outside.
+
+Closes https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/453
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3902c4ac7..099f2061c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -6,7 +6,7 @@ cmake_policy(VERSION 3.1)
+ project(evolution-data-server
+ 	VERSION 3.47.3
+ 	LANGUAGES C CXX)
+-set(CMAKE_CXX_STANDARD 14)
++set(CMAKE_CXX_STANDARD 14 CACHE INTERNAL "C++ standard to use")
+ set(PROJECT_BUGREPORT "https://gitlab.gnome.org/GNOME/evolution-data-server/issues/")
+ 
+ # Base Version: This is for API/version tracking for things like
+-- 
+GitLab
+
