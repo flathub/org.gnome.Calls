@@ -128,11 +128,12 @@ modules:
         config-opts:
           - -DCMAKE_CXX_STANDARD=17
           - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          - -DABSL_PROPAGATE_CXX_STD=ON
         sources:
           - type: git
             url: https://github.com/abseil/abseil-cpp.git
-            tag: '20220623.1'
-            commit: 8c0b94e793a66495e0b1f34a5eb26bd7dc672db0
+            tag: '20230125.1'
+            commit: c8a2f92586fe9b4e1aff049108f5db8064924d8e
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
@@ -193,6 +194,9 @@ modules:
           # NOTE tag 3.43.1.1 is not semantic versioning...
           #version-scheme: semantic
           tag-pattern: ^([\d.]+)$
+      # See https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/453
+      - type: patch
+        path: evolution-data-server-cpp-standard.patch
   - name: gom
     buildsystem: meson
     config-opts:
