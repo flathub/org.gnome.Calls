@@ -1,18 +1,45 @@
+From e9984d241dc6e0da541dc381f573ca1b3aea347c Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Mon, 20 Feb 2023 11:36:23 +0100
+Subject: [PATCH] I#453 - build: Make it possible to override C++ standard ][
+
+Use target_compile_features() instead of global C++ standard variable,
+which allows to define minimum version for the target, instead of forcing
+certain version for the whole project.
+
+Closes https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/453
 ---
- CMakeLists.txt | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ CMakeLists.txt                                   | 1 -
+ src/addressbook/libebook-contacts/CMakeLists.txt | 4 ++++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 3902c4ac7..099f2061c 100644
+index 099f2061c..fbe980381 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -6,7 +6,6 @@ cmake_policy(VERSION 3.1)
  project(evolution-data-server
- 	VERSION 3.47.3
+ 	VERSION 3.47.2
  	LANGUAGES C CXX)
 -set(CMAKE_CXX_STANDARD 14)
  set(PROJECT_BUGREPORT "https://gitlab.gnome.org/GNOME/evolution-data-server/issues/")
  
  # Base Version: This is for API/version tracking for things like
+diff --git a/src/addressbook/libebook-contacts/CMakeLists.txt b/src/addressbook/libebook-contacts/CMakeLists.txt
+index febbc8dec..ae992d32a 100644
+--- a/src/addressbook/libebook-contacts/CMakeLists.txt
++++ b/src/addressbook/libebook-contacts/CMakeLists.txt
+@@ -79,6 +79,10 @@ if(ENABLE_PHONENUMBER)
+ 		${PHONENUMBER_DEFINITIONS}
+ 	)
+ 
++	target_compile_features(ephonenumber-private PUBLIC
++		cxx_std_14
++	)
++
+ 	target_compile_options(ephonenumber-private PUBLIC
+ 		${ADDRESSBOOK_CFLAGS}
+ 	)
 -- 
+GitLab
 
