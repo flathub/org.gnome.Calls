@@ -172,16 +172,13 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.47.2
-        commit: 15cad429873d370e64e105a7ed3e5294855b3f4f
+        tag: 3.47.3
+        commit: 68ffcb67d34cd301de65198d6f8757eac0d1a59a
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
           #version-scheme: semantic
           tag-pattern: ^([\d.]+)$
-      # See https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/453
-      - type: patch
-        path: evolution-data-server-cpp-standard.patch
   - name: gom
     buildsystem: meson
     config-opts:
