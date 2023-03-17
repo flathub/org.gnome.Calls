@@ -101,8 +101,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.12
-            commit: f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+            tag: v22.2
+            commit: 81f89d509d6771dcccb619cbe26ac86cec472582
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -172,8 +172,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.47.3
-        commit: 68ffcb67d34cd301de65198d6f8757eac0d1a59a
+        tag: 3.48.0
+        commit: 15f367ad7ceb952d545a095b754e4866cbeff39d
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
