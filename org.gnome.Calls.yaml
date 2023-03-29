@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.8
-        commit: 07cd7bbb8a2faf9f2ef7c338e66f2ba303dfad0f
+        tag: v8.13.9
+        commit: 84f6152fba5a62fc9acc24bbdec970624a331f7c
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -101,8 +101,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.12
-            commit: f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+            tag: v22.2
+            commit: 81f89d509d6771dcccb619cbe26ac86cec472582
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -117,8 +117,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/abseil/abseil-cpp.git
-            tag: '20230125.1'
-            commit: c8a2f92586fe9b4e1aff049108f5db8064924d8e
+            tag: '20230125.2'
+            commit: b971ac5250ea8de900eae9f95e06548d14cd95fe
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
