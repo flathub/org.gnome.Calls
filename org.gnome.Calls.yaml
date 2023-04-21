@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.8
-        commit: 07cd7bbb8a2faf9f2ef7c338e66f2ba303dfad0f
+        tag: v8.13.10
+        commit: f094d308d0575c6150febf51d5f2c9e8416fdd31
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -101,8 +101,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.12
-            commit: f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+            tag: v22.3
+            commit: 482156c0f96dd670b9f1ba4f946e66edeb04535f
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -117,8 +117,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/abseil/abseil-cpp.git
-            tag: '20230125.1'
-            commit: c8a2f92586fe9b4e1aff049108f5db8064924d8e
+            tag: '20230125.2'
+            commit: b971ac5250ea8de900eae9f95e06548d14cd95fe
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
@@ -172,8 +172,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.48.0
-        commit: 15f367ad7ceb952d545a095b754e4866cbeff39d
+        tag: 3.48.1
+        commit: fc0a280168a5ec8aaeae7f9e34c46f10914c7c84
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
