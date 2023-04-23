@@ -67,6 +67,40 @@ modules:
           tag-pattern: ^libpeas-([\d.]+)$
           # NOTE tag libpeas-1.23.90.1 is not semantic versioning
           #version-scheme: semantic
+  - name: abseil
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_CXX_STANDARD=17
+      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -DABSL_PROPAGATE_CXX_STD=ON
+    sources:
+      - type: git
+        url: https://github.com/abseil/abseil-cpp.git
+        tag: '20230802.0'
+        commit: 29bf8085f3bf17b84d30e34b3d7ff8248fda404e
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d.]+)$
+  - name: protobuf
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+      - -Dprotobuf_BUILD_TESTS=OFF
+    cleanup:
+      - protoc
+      - /bin
+      - /doc
+      - /lib/plugins
+    sources:
+      - type: git
+        url: https://github.com/protocolbuffers/protobuf.git
+        tag: v24.3
+        commit: ee1355459c9ce7ffe264bc40cfdc7b7623d37e99
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
+          #version-scheme: semantic
   - name: libphonenumber
     buildsystem: cmake-ninja
     config-opts:
@@ -91,41 +125,6 @@ modules:
         commands:
           - sed -i -e 's/\${\${NAME}_BIN}-NOTFOUND/\${NAME}_BIN-NOTFOUND/' cpp/CMakeLists.txt
     subdir: cpp
-    modules:
-      - name: abseil
-        buildsystem: cmake-ninja
-        config-opts:
-          - -DCMAKE_CXX_STANDARD=17
-          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-          - -DABSL_PROPAGATE_CXX_STD=ON
-        sources:
-          - type: git
-            url: https://github.com/abseil/abseil-cpp.git
-            tag: '20230802.0'
-            commit: 29bf8085f3bf17b84d30e34b3d7ff8248fda404e
-            x-checker-data:
-              type: git
-              tag-pattern: ^([\d.]+)$
-      - name: protobuf
-        buildsystem: cmake-ninja
-        config-opts:
-          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-          - -Dprotobuf_BUILD_TESTS=OFF
-        cleanup:
-          - protoc
-          - /bin
-          - /doc
-          - /lib/plugins
-        sources:
-          - type: git
-            url: https://github.com/protocolbuffers/protobuf.git
-            tag: v24.3
-            commit: ee1355459c9ce7ffe264bc40cfdc7b7623d37e99
-            x-checker-data:
-              type: git
-              tag-pattern: ^v([\d.]+)$
-              # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
-              #version-scheme: semantic
   - name: libical
     cleanup:
       - /lib/cmake
