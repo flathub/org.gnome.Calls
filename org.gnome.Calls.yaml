@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.10
-        commit: f094d308d0575c6150febf51d5f2c9e8416fdd31
+        tag: v8.13.12
+        commit: a724433596e5516624b42c21fa894595c5a65e48
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -101,8 +101,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.12
-            commit: f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+            tag: v23.0
+            commit: 6e511679de8ab0feefc1cdac1505b2fac5548e42
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -117,8 +117,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/abseil/abseil-cpp.git
-            tag: '20230125.2'
-            commit: b971ac5250ea8de900eae9f95e06548d14cd95fe
+            tag: '20230125.3'
+            commit: c2435f8342c2d0ed8101cb43adfd605fdc52dca2
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
@@ -237,8 +237,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.14
-        commit: 3f17604d0c427a276839ea96b6dc31d7da69d27c
+        tag: v1.13.15
+        commit: 1a31b18b38715b14d0f3f97039a12e272c71b98a
         x-checker-data:
           type: git
           version-scheme: semantic
