@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.14
-        commit: 17b157870a5382eb314f5b436383e89cc21558c4
+        tag: v8.13.18
+        commit: 54af863d780dcfccbe25d6f35fef0cd5c2c7dde4
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -101,8 +101,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/protocolbuffers/protobuf.git
-            tag: v21.12
-            commit: f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+            tag: v23.4
+            commit: 2c5fa078d8e86e5f4bd34e6f4c9ea9e8d7d4d44a
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -172,8 +172,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.48.3
-        commit: a9c0cc37bf7e937b2b46b9363c95476863f57f2e
+        tag: 3.49.2
+        commit: 6f33125a5d8c0f3e63cc42f7b9aa6dd37e117ebc
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -237,8 +237,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/freeswitch/sofia-sip.git
-        tag: v1.13.15
-        commit: 1a31b18b38715b14d0f3f97039a12e272c71b98a
+        tag: v1.13.16
+        commit: dfc7095f4cce19133e27c230eae8ababb061bfed
         x-checker-data:
           type: git
           version-scheme: semantic
