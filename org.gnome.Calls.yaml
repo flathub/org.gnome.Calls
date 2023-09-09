@@ -107,7 +107,6 @@ modules:
   - name: libphonenumber
     buildsystem: cmake-ninja
     config-opts:
-      - -DCMAKE_CXX_STANDARD=17
       - -DREGENERATE_METADATA=OFF
       - -DUSE_BOOST=OFF
       - -DBUILD_TESTING=OFF
