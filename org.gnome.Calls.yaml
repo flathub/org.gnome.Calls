@@ -107,7 +107,6 @@ modules:
   - name: libphonenumber
     buildsystem: cmake-ninja
     config-opts:
-      - -DCMAKE_CXX_STANDARD=17
       - -DREGENERATE_METADATA=OFF
       - -DUSE_BOOST=OFF
       - -DBUILD_TESTING=OFF
@@ -171,10 +170,9 @@ modules:
       - -DENABLE_INSTALLED_TESTS=OFF
       - -DENABLE_GTK_DOC=OFF
       - -DENABLE_EXAMPLES=OFF
-      - -DWITH_PHONENUMBER:PATH=/
+      - -DWITH_PHONENUMBER=ON
       - -DPHONENUMBER_DEFINITIONS=
       - -DENABLE_CANBERRA=OFF
-      - -DENABLE_DOT_LOCKING=OFF
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
