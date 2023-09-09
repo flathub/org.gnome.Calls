@@ -173,7 +173,6 @@ modules:
       - -DWITH_PHONENUMBER:PATH=/
       - -DPHONENUMBER_DEFINITIONS=
       - -DENABLE_CANBERRA=OFF
-      - -DENABLE_DOT_LOCKING=OFF
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
