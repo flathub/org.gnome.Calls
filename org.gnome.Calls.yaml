@@ -83,6 +83,9 @@ modules:
         x-checker-data:
           type: git
           version-scheme: semantic
+      # BUG https://github.com/google/libphonenumber/pull/3211
+      - type: patch
+        path: libphonenumber-cpp-standard.patch
       # BUG https://github.com/google/libphonenumber/pull/3212
       - type: shell
         commands:
