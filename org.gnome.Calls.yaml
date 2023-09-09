@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.19
-        commit: 9e08719a258709fe3f0682fb786a8f06cee2d3b6
+        tag: v8.13.20
+        commit: 6d7589a49a91bfc15bfb757a516ded67ade2c1ed
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -172,8 +172,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.49.2
-        commit: 6f33125a5d8c0f3e63cc42f7b9aa6dd37e117ebc
+        tag: 3.49.3
+        commit: 8f699be0ca5a697531fe293936120fd580428e7d
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
