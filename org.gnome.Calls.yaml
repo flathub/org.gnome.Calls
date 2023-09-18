@@ -77,8 +77,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/abseil/abseil-cpp.git
-        tag: '20230802.0'
-        commit: 29bf8085f3bf17b84d30e34b3d7ff8248fda404e
+        tag: '20230802.1'
+        commit: fb3621f4f897824c0dbe0615fa94543df6192f30
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
