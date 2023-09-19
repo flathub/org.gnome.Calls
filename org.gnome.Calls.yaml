@@ -114,14 +114,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.20
-        commit: 6d7589a49a91bfc15bfb757a516ded67ade2c1ed
+        tag: v8.13.21
+        commit: f6bf98034432c36dee603eee2d820a03c67c7d1e
         x-checker-data:
           type: git
           version-scheme: semantic
-      # BUG https://github.com/google/libphonenumber/pull/3211
-      - type: patch
-        path: libphonenumber-cpp-standard.patch
       # BUG https://github.com/google/libphonenumber/pull/3212
       - type: shell
         commands:
