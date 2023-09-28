@@ -119,10 +119,6 @@ modules:
         x-checker-data:
           type: git
           version-scheme: semantic
-      # BUG https://github.com/google/libphonenumber/pull/3212
-      - type: shell
-        commands:
-          - sed -i -e 's/\${\${NAME}_BIN}-NOTFOUND/\${NAME}_BIN-NOTFOUND/' cpp/CMakeLists.txt
     subdir: cpp
   - name: libical
     cleanup:
