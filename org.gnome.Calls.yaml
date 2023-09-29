@@ -247,8 +247,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v44.2
-        commit: 91e5cad939f6753bc232c8990be295b068473949
+        tag: v45.0
+        commit: 936d36287324163b958c6ea0c4297c7a607ee18c
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
