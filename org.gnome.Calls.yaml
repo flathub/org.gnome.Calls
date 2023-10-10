@@ -32,12 +32,18 @@ cleanup:
   - '*.a'
 modules:
   - name: modem-manager
+    buildsystem: meson
     config-opts:
-      - --without-udev
-      - --without-mbim
-      - --without-qmi
-      - --with-systemdsystemunitdir=/app/lib/systemd/system
-      - --with-udev-base-dir=/app/lib/udev
+      - -Dudev=false
+      - -Dmbim=false
+      - -Dqmi=false
+      - -Dqrtr=false
+      - -Dexamples=false
+      - -Dtests=false
+      - -Dman=false
+      - -Dbash_completion=false
+      - -Dsystemdsystemunitdir=/app/lib/systemd/system
+      - -Dudevdir=/app/lib/udev
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
