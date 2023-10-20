@@ -176,8 +176,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.50.0
-        commit: 9233378a13d9054afd3c4bdd006393b220575e04
+        tag: 3.50.1
+        commit: badac47c43a262b6ab49e665af2816423bb3fb33
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
