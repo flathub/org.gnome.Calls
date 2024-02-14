@@ -1,0 +1,32 @@
+From 6ee081283a4de2382f979177d4162ed16f1ae0b4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Sabri=20=C3=9Cnal?= <libreajans@gmail.com>
+Date: Mon, 18 Dec 2023 16:26:48 +0300
+Subject: [PATCH] appdata: Improve appdata for AppStream 1.0
+
+- Add the `<developer><name>` tag
+- Mark the `<developer_name>` tag as deprecated
+---
+ data/org.gnome.Calls.metainfo.xml | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/data/org.gnome.Calls.metainfo.xml b/data/org.gnome.Calls.metainfo.xml
+index cf9c6bac..1fb05254 100644
+--- a/data/org.gnome.Calls.metainfo.xml
++++ b/data/org.gnome.Calls.metainfo.xml
+@@ -21,6 +21,13 @@
+     <launchable type="desktop-id">org.gnome.Calls.desktop</launchable>
+     <translation type="gettext">calls</translation>
+ 
++  <!-- developer_name tag deprecated with Appstream 1.0 -->
++  <developer_name>Julian Sparber, Evangelos Ribeiro Tzaras</developer_name>
++    <developer id="puri.sm">
++      <name translatable="no">Julian Sparber</name>
++      <name translatable="no">Evangelos Ribeiro Tzaras</name>
++    </developer>
++
+     <screenshots>
+       <screenshot type="default">
+         <!-- Translators: A screenshot description. -->
+-- 
+GitLab
+
