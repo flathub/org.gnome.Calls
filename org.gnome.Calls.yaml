@@ -259,6 +259,3 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
-      # BUG https://gitlab.gnome.org/GNOME/calls/-/merge_requests/711
-      - type: patch
-        path: appstream-developer.patch
