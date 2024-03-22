@@ -221,11 +221,11 @@ modules:
     sources:
       - type: git
         url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: v0.0.0+git20220520
-        commit: 17c1c2aa24dbf3b9829bcfc3db38f633053c52f9
+        tag: v0.2.1
+        commit: 1104cef50acb0b18a0d545e6a09773e3feb42e5b
         x-checker-data:
           type: git
-          tag-pattern: ^v0\.0\.0\+git([\d]{8})$
+          version-scheme: semantic
   - name: callaudiod
     buildsystem: meson
     sources:
