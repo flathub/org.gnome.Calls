@@ -207,8 +207,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/folks.git
-        tag: 0.15.8
-        commit: 554fca9ae1e37d0a5723f1d4ca8701b75c691a68
+        tag: 0.15.9
+        commit: f57424e8411bb0b005483593ed11025a838ab19f
         x-checker-data:
           type: git
           # NOTE tag 0.14 is not semantic versioning...
