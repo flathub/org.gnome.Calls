@@ -190,8 +190,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/gom.git
-        tag: 0.5.0
-        commit: de52f4fe1d317258f9c8f386d9ab82f03ac3a4fb
+        tag: 0.5.1
+        commit: 27afe054d80f5c6e8189f4ee12a87035ba192816
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
