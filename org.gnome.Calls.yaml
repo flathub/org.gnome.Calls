@@ -221,8 +221,8 @@ modules:
     sources:
       - type: git
         url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: v0.2.1
-        commit: 1104cef50acb0b18a0d545e6a09773e3feb42e5b
+        tag: v0.3.0
+        commit: bf6928e47d6fc940986c06428e87a2eb95249ae0
         x-checker-data:
           type: git
           version-scheme: semantic
