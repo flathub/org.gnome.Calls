@@ -120,8 +120,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.35
-        commit: 127062fe7366823a89e11a1d9a421e99cf3a33b2
+        tag: v8.13.36
+        commit: 1035cc6c80dee449be42b285191329533f9e4dc9
         x-checker-data:
           type: git
           version-scheme: semantic
