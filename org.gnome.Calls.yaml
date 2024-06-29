@@ -120,8 +120,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.39
-        commit: ff7fbcb477d829a7e5087fea85d9831e5b8dc9cd
+        tag: v8.13.40
+        commit: 834474c954f0d5c04b2ab76b448070b65b58d746
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -254,8 +254,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v46.0
-        commit: db9b771c19a22cf1ee46e1bce60c69a6c4c0e155
+        tag: v46.3
+        commit: f8c247148717bbad9414a9b246d88d1e685e68ed
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
