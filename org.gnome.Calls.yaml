@@ -111,8 +111,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.46
-        commit: 594dba3bc790c1c35a7cb1ea4a49779b3eca840b
+        tag: v8.13.47
+        commit: cb10d7fb4953c50be150ecc93343c28f94a00054
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -213,8 +213,8 @@ modules:
     sources:
       - type: git
         url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: v0.4.1
-        commit: 427058750263fc196cd3d5dd2f62058ed0ea7c18
+        tag: v0.5.0
+        commit: 245083d82cab74ef5718aa47ae8a9806d54c1837
         x-checker-data:
           type: git
           version-scheme: semantic
