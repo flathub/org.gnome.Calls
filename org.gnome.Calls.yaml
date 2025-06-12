@@ -47,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.22.0
-        commit: 03f786ce66360d67c669f4f122f8aa458e6f01ea
+        tag: 1.24.0
+        commit: dfa41adf391b090720fb1ea56d884f61ea7fba29
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
@@ -74,8 +74,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/abseil/abseil-cpp.git
-        tag: '20240722.0'
-        commit: 4447c7562e3bc702ade25105912dce503f0c4010
+        tag: '20250512.0'
+        commit: bc257a88f7c1939f24e0379f14a3589e926c950c
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -94,8 +94,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v28.3
-        commit: 5fda5abda3dee5f7a102c85860594bff8d8610bd
+        tag: v31.1
+        commit: 74211c0dfc2777318ab53c2cd2c317a2ef9012de
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -111,8 +111,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v8.13.50
-        commit: 786b4e21bb9c7ffc8c4d79b18edc42cff48a2687
+        tag: v9.0.7
+        commit: 861d9bbd09f08d971f0a6149dbe931e5f68a3c18
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -132,8 +132,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libical/libical.git
-        tag: v3.0.18
-        commit: 1b28a846d2dca16e5d15a433c6011cc2483555bb
+        tag: v3.0.20
+        commit: 57ce34025066935f356fd539e6deb7a7a9952618
         x-checker-data:
           type: git
           # NOTE tag v0.48 is not semantic versioning...
@@ -167,8 +167,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.54.1
-        commit: 0c6b6f30c524a1e0bc656b68e8b02f78d3a74981
+        tag: 3.56.2
+        commit: 9330886fe4c5685bd18d1979bd5c60cb9c3fcc6d
         x-checker-data:
           type: git
           # NOTE tag 3.43.1.1 is not semantic versioning...
@@ -213,8 +213,8 @@ modules:
     sources:
       - type: git
         url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: v0.5.0
-        commit: 245083d82cab74ef5718aa47ae8a9806d54c1837
+        tag: v0.8.1
+        commit: f14642cb0408af9b6bf963eff3bc61eff6b0a1b2
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -238,6 +238,8 @@ modules:
         x-checker-data:
           type: git
           version-scheme: semantic
+      - type: patch
+        path: sofia-sip-gcc14-backport.patch
   - name: calls
     buildsystem: meson
     config-opts:
@@ -245,8 +247,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v47.0
-        commit: 11ce0eae72f6f6eeb1c1de2cfe71046087368121
+        tag: v48.2
+        commit: 9100b845a7aad0607b54a8ff67eb5790662f977b
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
