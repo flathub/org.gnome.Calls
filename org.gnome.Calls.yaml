@@ -216,9 +216,9 @@ modules:
       - -Dtests=false
     sources:
       - type: git
-        url: https://source.puri.sm/Librem5/feedbackd.git
-        tag: v0.8.1
-        commit: f14642cb0408af9b6bf963eff3bc61eff6b0a1b2
+        url: https://gitlab.freedesktop.org/agx/feedbackd.git
+        tag: v0.8.3
+        commit: d155b2e3054c94e05612f61150c90f1d984f0d05
         x-checker-data:
           type: git
           version-scheme: semantic
