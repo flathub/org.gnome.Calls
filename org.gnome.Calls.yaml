@@ -169,15 +169,12 @@ modules:
       - -DPHONENUMBER_DEFINITIONS=
       - -DENABLE_CANBERRA=OFF
     sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/evolution-data-server.git
-        tag: 3.57.1
-        commit: 029728387fa7fcc5d4512cf679a5e3da0de75431
+      - type: archive
+        url: https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz
+        sha256: df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c
         x-checker-data:
-          type: git
-          # NOTE tag 3.43.1.1 is not semantic versioning...
-          #version-scheme: semantic
-          tag-pattern: ^([\d.]+)$
+          type: gnome
+          name: evolution-data-server
   - name: gom
     buildsystem: meson
     config-opts:
