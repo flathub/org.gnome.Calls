@@ -254,3 +254,5 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
+      - type: patch
+        path: calls-appstream-invalid-release-description-backport.patch
