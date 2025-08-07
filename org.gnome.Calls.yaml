@@ -47,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/mobile-broadband/ModemManager.git
-        tag: 1.24.0
-        commit: dfa41adf391b090720fb1ea56d884f61ea7fba29
+        tag: 1.24.2
+        commit: f2b9ab1ad78d322f32134a444b5b54c6e8160e19
         x-checker-data:
           type: git
           # NOTE tag 0.3 is not semantic versioning
@@ -115,8 +115,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v9.0.10
-        commit: fa3fd1fdaf28275e4395fe136afc52b24494db2b
+        tag: v9.0.11
+        commit: f705f9eb57500e514f4559b2cfe65de5b4ed3693
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -170,8 +170,8 @@ modules:
       - -DENABLE_CANBERRA=OFF
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz
-        sha256: df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c
+        url: https://download.gnome.org/sources/evolution-data-server/3.57/evolution-data-server-3.57.2.tar.xz
+        sha256: 9b2647c4265e0a6767fe19c7d602eb9bdcf3f428e4f9c41617e962a7fff9eebd
         x-checker-data:
           type: gnome
           name: evolution-data-server
@@ -214,8 +214,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/agx/feedbackd.git
-        tag: v0.8.3
-        commit: d155b2e3054c94e05612f61150c90f1d984f0d05
+        tag: v0.8.4
+        commit: 69a4ee2538029b97a4bf3a3cd011cd3922e2f3f9
         x-checker-data:
           type: git
           version-scheme: semantic
