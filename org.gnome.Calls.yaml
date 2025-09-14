@@ -226,8 +226,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.10
-        commit: 56831297817afb6b30062b7cee3e40225ac39cac
+        tag: 0.1.99
+        commit: 8d262597f41ff787359059ec6a15acd48b7433f6
         x-checker-data:
           type: git
           version-scheme: semantic
