@@ -63,8 +63,8 @@ modules:
       - -Dgjs=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.7.tar.xz
-        sha256: 1e9a9d69761d2109eff5b7c11d8c96b4867ccfaca2b921eded49401192769ec9
+        url: https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.0.tar.xz
+        sha256: c2887233f084a69fabfc7fa0140d410491863d7050afb28677f9a553b2580ad9
         x-checker-data:
           type: gnome
           name: libpeas
@@ -98,8 +98,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        tag: v32.0
-        commit: 4fbd1111a292d04746c732573025e3251de0bb9c
+        tag: v32.1
+        commit: 7fcfd66022455635fa29af92987cdc0967efd4f3
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -115,8 +115,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v9.0.12
-        commit: 6734f802e490ebe6985fe1185208de8fa54b8407
+        tag: v9.0.14
+        commit: ef5facd4d0881041cd776e518df4ba94e01cfd08
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -170,8 +170,8 @@ modules:
       - -DENABLE_CANBERRA=OFF
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz
-        sha256: df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c
+        url: https://download.gnome.org/sources/evolution-data-server/3.58/evolution-data-server-3.58.0.tar.xz
+        sha256: a2b5a0b8db11b728edc1d6f1c229dc2711962b7a87c0384221dac8d96000cef7
         x-checker-data:
           type: gnome
           name: evolution-data-server
@@ -224,8 +224,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.10
-        commit: 56831297817afb6b30062b7cee3e40225ac39cac
+        tag: 0.1.99
+        commit: 8d262597f41ff787359059ec6a15acd48b7433f6
         x-checker-data:
           type: git
           version-scheme: semantic
