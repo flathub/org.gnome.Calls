@@ -1,6 +1,6 @@
 app-id: org.gnome.Calls
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: gnome-calls
 finish-args:
@@ -21,6 +21,7 @@ finish-args:
 cleanup:
   - /include
   - /lib/pkgconfig
+  - /lib/systemd
   - /man
   - /share/doc
   - /share/gtk-doc
@@ -248,6 +249,7 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dmanpages=false
+      - -Dsystemd_user_unit_dir=/app/lib/systemd/user
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
