@@ -1,6 +1,6 @@
 app-id: org.gnome.Calls
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: gnome-calls
 finish-args:
@@ -21,6 +21,7 @@ finish-args:
 cleanup:
   - /include
   - /lib/pkgconfig
+  - /lib/systemd
   - /man
   - /share/doc
   - /share/gtk-doc
@@ -70,43 +71,6 @@ modules:
         x-checker-data:
           type: gnome
           name: libpeas
-  - name: abseil
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_CXX_STANDARD=17
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-      - -DBUILD_SHARED_LIBS=ON
-      - -DABSL_PROPAGATE_CXX_STD=ON
-    sources:
-      - type: git
-        url: https://github.com/abseil/abseil-cpp.git
-        tag: '20250814.0'
-        commit: 987c57f325f7fa8472fa84e1f885f7534d391b0d
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
-  - name: protobuf
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-      - -Dprotobuf_ABSL_PROVIDER=package
-      - -Dprotobuf_BUILD_SHARED_LIBS=ON
-      - -Dprotobuf_BUILD_TESTS=OFF
-    cleanup:
-      - protoc
-      - /bin
-      - /doc
-      - /lib/plugins
-    sources:
-      - type: git
-        url: https://github.com/protocolbuffers/protobuf.git
-        tag: v32.1
-        commit: 7fcfd66022455635fa29af92987cdc0967efd4f3
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-          # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
-          #version-scheme: semantic
   - name: libphonenumber
     buildsystem: cmake-ninja
     config-opts:
@@ -123,6 +87,44 @@ modules:
           type: git
           version-scheme: semantic
     subdir: cpp
+    modules:
+      - name: protobuf
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          - -Dprotobuf_ABSL_PROVIDER=package
+          - -Dprotobuf_BUILD_SHARED_LIBS=ON
+          - -Dprotobuf_BUILD_TESTS=OFF
+        cleanup:
+          - protoc
+          - /bin
+          - /doc
+          - /lib/plugins
+        sources:
+          - type: git
+            url: https://github.com/protocolbuffers/protobuf.git
+            tag: v32.1
+            commit: 7fcfd66022455635fa29af92987cdc0967efd4f3
+            x-checker-data:
+              type: git
+              tag-pattern: ^v([\d.]+)$
+              # BUG https://github.com/flathub/flatpak-external-data-checker/issues/294
+              #version-scheme: semantic
+      - name: abseil
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DCMAKE_CXX_STANDARD=17
+          - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+          - -DBUILD_SHARED_LIBS=ON
+          - -DABSL_PROPAGATE_CXX_STD=ON
+        sources:
+          - type: git
+            url: https://github.com/abseil/abseil-cpp.git
+            tag: '20250814.0'
+            commit: 987c57f325f7fa8472fa84e1f885f7534d391b0d
+            x-checker-data:
+              type: git
+              tag-pattern: ^([\d.]+)$
   - name: libical
     cleanup:
       - /lib/cmake
@@ -247,6 +249,7 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dmanpages=false
+      - -Dsystemd_user_unit_dir=/app/lib/systemd/user
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
