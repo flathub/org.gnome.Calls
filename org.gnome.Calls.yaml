@@ -1,6 +1,6 @@
 app-id: org.gnome.Calls
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: gnome-calls
 finish-args:
@@ -21,6 +21,7 @@ finish-args:
 cleanup:
   - /include
   - /lib/pkgconfig
+  - /lib/systemd
   - /man
   - /share/doc
   - /share/gtk-doc
@@ -247,14 +248,13 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dmanpages=false
+      - -Dsystemd_user_unit_dir=/app/lib/systemd/user
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v48.2
-        commit: 9100b845a7aad0607b54a8ff67eb5790662f977b
+        tag: v49.1
+        commit: 08b61594df27b4b46a38eab0d3fc824c7ea2a02e
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
-      - type: patch
-        path: calls-appstream-invalid-release-description-backport.patch
