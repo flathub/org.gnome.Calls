@@ -80,8 +80,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/abseil/abseil-cpp.git
-        tag: '20250814.0'
-        commit: 987c57f325f7fa8472fa84e1f885f7534d391b0d
+        tag: '20250814.1'
+        commit: d38452e1ee03523a208362186fd42248ff2609f6
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -226,8 +226,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/mobian1/callaudiod.git
-        tag: 0.1.10
-        commit: 56831297817afb6b30062b7cee3e40225ac39cac
+        tag: 0.1.99
+        commit: 8d262597f41ff787359059ec6a15acd48b7433f6
         x-checker-data:
           type: git
           version-scheme: semantic
