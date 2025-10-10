@@ -117,8 +117,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/google/libphonenumber.git
-        tag: v9.0.15
-        commit: c02f289dbe110d871ee10b53cfd4d6a23e0b8225
+        tag: v9.0.16
+        commit: 7966b5e3f8cae4d5a6c8ebece12b0568bcd8a630
         x-checker-data:
           type: git
           version-scheme: semantic
@@ -172,8 +172,8 @@ modules:
       - -DENABLE_CANBERRA=OFF
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/evolution-data-server/3.58/evolution-data-server-3.58.0.tar.xz
-        sha256: a2b5a0b8db11b728edc1d6f1c229dc2711962b7a87c0384221dac8d96000cef7
+        url: https://download.gnome.org/sources/evolution-data-server/3.58/evolution-data-server-3.58.1.tar.xz
+        sha256: a914928814ef887f0979ba78ea8d7bcc98f96cf07cbb70b0051980bd90ec35f0
         x-checker-data:
           type: gnome
           name: evolution-data-server
@@ -250,8 +250,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/calls.git
-        tag: v48.2
-        commit: 9100b845a7aad0607b54a8ff67eb5790662f977b
+        tag: v49.1
+        commit: 08b61594df27b4b46a38eab0d3fc824c7ea2a02e
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
