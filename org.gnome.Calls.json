@@ -64,7 +64,7 @@
             ]
         },
         {
-            "name": "libpeas",
+            "name": "libpeas-2",
             "buildsystem": "meson",
             "config-opts": [
                 "-Dgtk_doc=false",
@@ -112,7 +112,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-                "-Dprotobuf_ABSL_PROVIDER=package",
+                "-Dprotobuf_LOCAL_DEPENDENCIES_ONLY=ON",
                 "-Dprotobuf_BUILD_SHARED_LIBS=ON",
                 "-Dprotobuf_BUILD_TESTS=OFF"
             ],
@@ -328,6 +328,7 @@
         },
         {
             "name": "calls",
+            "builddir": true,
             "buildsystem": "meson",
             "config-opts": [
                 "-Dmanpages=false",
