@@ -58,6 +58,7 @@
                     "commit": "f2b9ab1ad78d322f32134a444b5b54c6e8160e19",
                     "x-checker-data": {
                         "type": "git",
+                        "version-scheme": "semantic",
                         "tag-pattern": "^(\\d+\\.\\d*[02468]\\.\\d+)$"
                     }
                 }
@@ -75,12 +76,14 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.0.tar.xz",
-                    "sha256": "c2887233f084a69fabfc7fa0140d410491863d7050afb28677f9a553b2580ad9",
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libpeas.git",
+                    "tag": "2.2.0",
+                    "commit": "39a2b9c55deaa5246b99b502b53896d3ad41846b",
                     "x-checker-data": {
-                        "type": "gnome",
-                        "name": "libpeas"
+                        "type": "git",
+                        "version-scheme": "semantic",
+                        "tag-pattern": "^(\\d+\\.\\d*[02468]\\.\\d+)$"
                     }
                 }
             ]
@@ -216,12 +219,14 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.58/evolution-data-server-3.58.1.tar.xz",
-                    "sha256": "a914928814ef887f0979ba78ea8d7bcc98f96cf07cbb70b0051980bd90ec35f0",
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/evolution-data-server.git",
+                    "tag": "3.58.1",
+                    "commit": "85f8acbdc1abfb3a3f2cf24c75836ec02016618e",
                     "x-checker-data": {
-                        "type": "gnome",
-                        "name": "evolution-data-server"
+                        "type": "git",
+                        "version-scheme": "semantic",
+                        "tag-pattern": "^(\\d+\\.\\d*[02468]\\.\\d+)$"
                     }
                 }
             ]
