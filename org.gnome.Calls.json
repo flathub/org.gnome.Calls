@@ -338,8 +338,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/calls.git",
-                    "tag": "v49.1",
-                    "commit": "08b61594df27b4b46a38eab0d3fc824c7ea2a02e",
+                    "tag": "v49.1.1",
+                    "commit": "798c698463aa5781d56f2f77bd7abd97129a2c23",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$",
