@@ -241,8 +241,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/gom.git",
-                    "tag": "0.5.4",
-                    "commit": "1de7600d8e6973f62123dae13fdf37adcda2da5d",
+                    "tag": "0.5.5",
+                    "commit": "0dbeaa81f83ca230d9240be0ff704dc0865a0f1f",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
