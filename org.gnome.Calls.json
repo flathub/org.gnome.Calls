@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Calls",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-calls",
     "finish-args": [
@@ -84,28 +84,6 @@
                         "type": "git",
                         "version-scheme": "semantic",
                         "tag-pattern": "^(\\d+\\.\\d*[02468]\\.\\d+)$"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "abseil",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_CXX_STANDARD=17",
-                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-                "-DBUILD_SHARED_LIBS=ON",
-                "-DABSL_PROPAGATE_CXX_STD=ON"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/abseil/abseil-cpp.git",
-                    "tag": "20250814.1",
-                    "commit": "d38452e1ee03523a208362186fd42248ff2609f6",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^([\\d.]+)$"
                     }
                 }
             ]
