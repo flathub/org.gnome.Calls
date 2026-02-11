@@ -107,8 +107,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/protocolbuffers/protobuf.git",
-                    "tag": "v33.2",
-                    "commit": "7ccf2060af4cd13c44a8659d0999be6c7a98fcc1",
+                    "tag": "v33.5",
+                    "commit": "b6f9284da830b69be787732ffdaa35049d20a088",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
@@ -129,8 +129,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.21",
-                    "commit": "3b7cd902d9928110251c0d5c567ea76b6feabf16",
+                    "tag": "v9.0.23",
+                    "commit": "fed70a7abe980c6f4e8faa90a4789c8b019aa265",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -199,8 +199,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/evolution-data-server.git",
-                    "tag": "3.58.2",
-                    "commit": "9963c57f77a2ac305881d6b54b881c93118c3f84",
+                    "tag": "3.58.3",
+                    "commit": "4d025ea6b9d5fb34ac7fa1ddaedc6de5a3e0e540",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic",
@@ -244,8 +244,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/folks.git",
-                    "tag": "0.15.9",
-                    "commit": "f57424e8411bb0b005483593ed11025a838ab19f",
+                    "tag": "0.15.12",
+                    "commit": "b13bf053157213749b8ff6444255a7a71cb5ade4",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
@@ -264,8 +264,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/agx/feedbackd.git",
-                    "tag": "v0.8.8",
-                    "commit": "8ae3449d616e06240afb1e445727a08d6dee9559",
+                    "tag": "v0.8.9",
+                    "commit": "1be162a2e5aad10760f34b734e062c4fa250b159",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
