@@ -22,10 +22,13 @@
     ],
     "cleanup": [
         "/include",
+        "/lib/cmake",
+        "/lib/girepository-1.0",
         "/lib/pkgconfig",
         "/lib/systemd",
         "/man",
         "/share/doc",
+        "/share/gir-1.0",
         "/share/gtk-doc",
         "/share/man",
         "/share/pkgconfig",
@@ -49,6 +52,13 @@
                 "-Dbash_completion=false",
                 "-Dsystemdsystemunitdir=/app/lib/systemd/system",
                 "-Dudevdir=/app/lib/udev"
+            ],
+            "cleanup": [
+                "/bin",
+                "/sbin",
+                "/lib/udev",
+                "/share/dbus-1/system-services",
+                "/share/dbus-1/services"
             ],
             "sources": [
                 {
@@ -141,9 +151,6 @@
         },
         {
             "name": "libical",
-            "cleanup": [
-                "/lib/cmake"
-            ],
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
@@ -170,9 +177,6 @@
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "evolution-data-server",
-            "cleanup": [
-                "/share/GConf"
-            ],
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DENABLE_PHONENUMBER=ON",
@@ -194,6 +198,9 @@
                 "-DWITH_PHONENUMBER=ON",
                 "-DPHONENUMBER_DEFINITIONS=",
                 "-DENABLE_CANBERRA=OFF"
+            ],
+            "cleanup": [
+                "/share/GConf"
             ],
             "sources": [
                 {
@@ -231,14 +238,14 @@
         {
             "name": "folks",
             "buildsystem": "meson",
-            "cleanup": [
-                "/bin"
-            ],
             "config-opts": [
                 "-Dtelepathy_backend=false",
                 "-Dinspect_tool=false",
                 "-Dimport_tool=false",
                 "-Dbluez_backend=false"
+            ],
+            "cleanup": [
+                "/bin"
             ],
             "sources": [
                 {
@@ -260,6 +267,9 @@
                 "-Ddaemon=false",
                 "-Dtests=false"
             ],
+            "cleanup": [
+                "/bin"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -276,6 +286,9 @@
         {
             "name": "callaudiod",
             "buildsystem": "meson",
+            "cleanup": [
+                "/bin"
+            ],
             "sources": [
                 {
                     "type": "git",
