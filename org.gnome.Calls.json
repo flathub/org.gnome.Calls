@@ -88,8 +88,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/libpeas.git",
-                    "tag": "2.2.0",
-                    "commit": "39a2b9c55deaa5246b99b502b53896d3ad41846b",
+                    "tag": "2.2.1",
+                    "commit": "744430715e619069b3fcb6c994f2c09257700d05",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic",
@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.24",
-                    "commit": "59a8b2c90a2d99a0bf0e2d0beaf64d53df707984",
+                    "tag": "v9.0.25",
+                    "commit": "f048001255abd572a165543f9e11c430f589256f",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -226,8 +226,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/gom.git",
-                    "tag": "0.5.5",
-                    "commit": "0dbeaa81f83ca230d9240be0ff704dc0865a0f1f",
+                    "tag": "0.5.6",
+                    "commit": "90412ae4525285bee7812a623386b1c21d8fddb3",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
