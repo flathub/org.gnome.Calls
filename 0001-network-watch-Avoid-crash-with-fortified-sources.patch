@@ -1,0 +1,58 @@
+From 3ee4a63ec2854dcfa00a898603613a5a87105d1d Mon Sep 17 00:00:00 2001
+From: Evangelos Ribeiro Tzaras <devrtz@fortysixandtwo.eu>
+Date: Tue, 27 Jan 2026 09:15:35 +0100
+Subject: [PATCH] network-watch: Avoid crash with fortified sources
+
+This is the minimal change I found that does not lead to a crash with
+_FORTIFY_SOURCE=3 when calling into the fortified inet_pton().
+
+However, I don't think this was a buffer overflow to begin with
+as the pointers points towards towards the beggining of req->buf
+which has plenty of space.
+
+Adding more debugging shows that dst passed to inet_pton()
+is exactly the same, both for the new and old way of calculating it:
+
+  DEBUG: old: 0x555556e35c0c new: 0x555556e35c0c
+  DEBUG: old data: 0x555556e35c10 new data: 0x555556e35c10
+  DEBUG: objsize rta_old 0 objsize rta 18446744073709551615
+  DEBUG: RTA 0x555556e35c0c RTA_DATA 0x555556e35c10 req 0x555556e35bf0 diff 28 diff_buf 0
+
+with diff the difference to self->req and diff_buf the difference to self->req->buf.
+
+The only difference appears to be the __glibc_objsize for the new and
+old RTA data, which seems to be at the heart of the trip-up.
+
+Closes: https://gitlab.gnome.org/GNOME/calls/-/issues/724
+
+Signed-off-by: Evangelos Ribeiro Tzaras <devrtz@fortysixandtwo.eu>
+Part-of: <https://gitlab.gnome.org/GNOME/calls/-/merge_requests/813>
+---
+ src/calls-network-watch.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/calls-network-watch.c b/src/calls-network-watch.c
+index 576d32c..fcb1fde 100644
+--- a/src/calls-network-watch.c
++++ b/src/calls-network-watch.c
+@@ -107,7 +107,7 @@ req_route_v4 (CallsNetworkWatch *self)
+   self->req->r.rtm_family = AF_INET;
+ 
+ 
+-  rta = ((struct rtattr *) (((void *) (&self->req->n)) +
++  rta = ((struct rtattr *) (((void *) (self->req)) +
+                             NLMSG_ALIGN (self->req->n.nlmsg_len)));
+   rta->rta_type = RTA_DST;
+   rta->rta_len = len;
+@@ -136,7 +136,7 @@ req_route_v6 (CallsNetworkWatch *self)
+   self->req->n.nlmsg_type = RTM_GETROUTE;
+   self->req->r.rtm_family = AF_INET6;
+ 
+-  rta = ((struct rtattr *) (((void *) (&self->req->n)) +
++  rta = ((struct rtattr *) (((void *) (self->req)) +
+                             NLMSG_ALIGN (self->req->n.nlmsg_len)));
+   rta->rta_type = RTA_DST;
+   rta->rta_len = len;
+-- 
+2.51.0
+

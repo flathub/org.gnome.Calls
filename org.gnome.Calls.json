@@ -341,6 +341,10 @@
                         "tag-pattern": "^v([\\d.]+)$",
                         "is-main-source": true
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "0001-network-watch-Avoid-crash-with-fortified-sources.patch"
                 }
             ]
         }
