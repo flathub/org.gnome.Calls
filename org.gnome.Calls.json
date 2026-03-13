@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.25",
-                    "commit": "f048001255abd572a165543f9e11c430f589256f",
+                    "tag": "v9.0.26",
+                    "commit": "07817b005926c648c5d7a29e2bf3ca844e0f7d68",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -206,8 +206,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/evolution-data-server.git",
-                    "tag": "3.58.3",
-                    "commit": "4d025ea6b9d5fb34ac7fa1ddaedc6de5a3e0e540",
+                    "tag": "3.60.0",
+                    "commit": "9d0ce9fee8c88fb2f7c19b1df311f844bdab710f",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic",
