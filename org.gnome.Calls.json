@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Calls",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-calls",
     "finish-args": [
@@ -284,6 +284,42 @@
             ]
         },
         {
+            "name": "libcanberra",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+                }
+            ],
+            "config-opts": [
+                "--disable-alsa",
+                "--disable-null",
+                "--disable-oss"
+            ]
+        },
+        {
+            "name": "gsound",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dintrospection=false",
+                "-Denable_vala=false"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/gsound.git",
+                    "tag": "1.0.3",
+                    "commit": "95d36d60cf53e0e7c5d5325e0f1f4fc765a611ae",
+                    "x-checker-data": {
+                        "type": "git",
+                        "version-scheme": "semantic",
+                        "tag-pattern": "^(\\d+\\.\\d+\\.\\d+)$"
+                    }
+                }
+            ]
+        },
+        {
             "name": "callaudiod",
             "buildsystem": "meson",
             "cleanup": [
@@ -323,19 +359,61 @@
             ]
         },
         {
+            "name": "mobile-broadband-provider-info",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info.git",
+                    "tag": "20251101",
+                    "commit": "18cb97517d9c831e1d2ec057e62d04fd3665e10f",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^(\\d{4}(?:0\\d|1[012])(?:[012]\\d|3[01]))$"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gmobile",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dexamples=false",
+                "-Dintrospection=false",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dvapi=false",
+                "-Dhwdb=false"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/World/Phosh/gmobile.git",
+                    "tag": "v0.6.0",
+                    "commit": "75c1a95ce5cb6b17c6cf05a8a22f57a3921831bf",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
+        },
+
+        {
             "name": "calls",
             "builddir": true,
             "buildsystem": "meson",
             "config-opts": [
                 "-Dmanpages=false",
-                "-Dsystemd_user_unit_dir=/app/lib/systemd/user"
+                "-Dsystemd_user_unit_dir=/app/lib/systemd/user",
+                "--wrap-mode=nodownload"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/calls.git",
-                    "tag": "v49.1.1",
-                    "commit": "798c698463aa5781d56f2f77bd7abd97129a2c23",
+                    "tag": "v50.0",
+                    "commit": "271ab5a5acccbc6de44995414ab2093c1f6688ec",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$",
@@ -343,8 +421,10 @@
                     }
                 },
                 {
-                    "type": "patch",
-                    "path": "0001-network-watch-Avoid-crash-with-fortified-sources.patch"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/World/Phosh/libcall-ui.git",
+                    "commit": "3a2044f8e7c45387954ed35d22c6b6309e6751d6",
+                    "dest": "subprojects/libcall-ui"
                 }
             ]
         }
