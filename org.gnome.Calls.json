@@ -58,7 +58,8 @@
                 "/sbin",
                 "/lib/udev",
                 "/share/dbus-1/system-services",
-                "/share/dbus-1/services"
+                "/share/dbus-1/services",
+                "/etc"
             ],
             "sources": [
                 {
@@ -108,7 +109,6 @@
                 "-Dprotobuf_BUILD_TESTS=OFF"
             ],
             "cleanup": [
-                "protoc",
                 "/bin",
                 "/doc",
                 "/lib/plugins"
@@ -245,7 +245,8 @@
                 "-Dbluez_backend=false"
             ],
             "cleanup": [
-                "/bin"
+                "/bin",
+                "/share/GConf"
             ],
             "sources": [
                 {
@@ -341,6 +342,9 @@
         {
             "name": "sofia-sip",
             "buildsystem": "autotools",
+            "cleanup": [
+                "/bin"
+            ],
             "sources": [
                 {
                     "type": "git",
