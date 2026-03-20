@@ -117,8 +117,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/protocolbuffers/protobuf.git",
-                    "tag": "v34.0",
-                    "commit": "6a6cd88c262ffdb1738167a47d5fcc7a3eb4edac",
+                    "tag": "v34.1",
+                    "commit": "4b0c3aacf0657fbf38253b38918d3358dd4319ec",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
@@ -334,8 +334,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/calls.git",
-                    "tag": "v49.1.1",
-                    "commit": "798c698463aa5781d56f2f77bd7abd97129a2c23",
+                    "tag": "v50.0",
+                    "commit": "271ab5a5acccbc6de44995414ab2093c1f6688ec",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$",
