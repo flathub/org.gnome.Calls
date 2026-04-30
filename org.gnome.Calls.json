@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.28",
-                    "commit": "5b8decec1c8cbac86dfa479f3b42d8ec2fbf1f90",
+                    "tag": "v9.0.29",
+                    "commit": "10b03f68e84eaf3e8179ed677487bdf54f23cea7",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -159,14 +159,15 @@
                 "-DICAL_GLIB=true",
                 "-DGOBJECT_INTROSPECTION=true",
                 "-DICAL_GLIB_VAPI=true",
-                "-DICAL_BUILD_DOCS=false"
+                "-DICAL_BUILD_DOCS=false",
+                "-DLIBICAL_JAVA_BINDINGS=False"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/libical/libical.git",
-                    "tag": "v3.0.20",
-                    "commit": "57ce34025066935f356fd539e6deb7a7a9952618",
+                    "tag": "v4.0.0",
+                    "commit": "a4aceb43adb8a40578c758ab13d40f233868a1eb",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
