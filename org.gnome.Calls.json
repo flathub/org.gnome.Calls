@@ -117,8 +117,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/protocolbuffers/protobuf.git",
-                    "tag": "v34.1",
-                    "commit": "4b0c3aacf0657fbf38253b38918d3358dd4319ec",
+                    "tag": "v35.0",
+                    "commit": "e59364c38e10de3686a3305ff11fbfc59a10dbd8",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.30",
-                    "commit": "5f37c1dbde13062c661bdbece0260d4790fb30a5",
+                    "tag": "v9.0.31",
+                    "commit": "02a48d8cc48d7972bf0509ac14d1322fc57c5eb1",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -166,8 +166,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libical/libical.git",
-                    "tag": "v4.0.0",
-                    "commit": "a4aceb43adb8a40578c758ab13d40f233868a1eb",
+                    "tag": "v4.0.1",
+                    "commit": "d863f7b7a0258ccea94db287c1590ed79808deed",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
