@@ -412,6 +412,9 @@
                 "-Dsystemd_user_unit_dir=/app/lib/systemd/user",
                 "--wrap-mode=nodownload"
             ],
+            "post-install": [
+                "sed -i '/^SystemdService=/d' /app/share/dbus-1/services/org.gnome.Calls.service"
+            ],
             "sources": [
                 {
                     "type": "git",
