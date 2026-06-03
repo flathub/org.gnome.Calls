@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.31",
-                    "commit": "f34c9e3e35583ae1b01877aa00f9e2ff0b9894af",
+                    "tag": "v9.0.32",
+                    "commit": "e8ed2c3d0cecaf36810397e0705adaa2a173f20b",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
