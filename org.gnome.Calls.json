@@ -100,39 +100,12 @@
             ]
         },
         {
-            "name": "protobuf",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-                "-Dprotobuf_LOCAL_DEPENDENCIES_ONLY=ON",
-                "-Dprotobuf_BUILD_SHARED_LIBS=ON",
-                "-Dprotobuf_BUILD_TESTS=OFF"
-            ],
-            "cleanup": [
-                "/bin",
-                "/doc",
-                "/lib/plugins"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/protocolbuffers/protobuf.git",
-                    "tag": "v36.2",
-                    "commit": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
-                    }
-                }
-            ]
-        },
-        {
             "name": "libphonenumber",
+            "subdir": "cpp",
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DREGENERATE_METADATA=OFF",
                 "-DUSE_BOOST=OFF",
-                "-DBUILD_TESTING=OFF",
                 "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
             ],
             "sources": [
@@ -143,11 +116,61 @@
                     "commit": "670015c8aec4c3a84769c664f194677201236b43",
                     "x-checker-data": {
                         "type": "git",
-                        "version-scheme": "semantic"
+                        "version-scheme": "semantic",
+                        "tag-pattern": "^v(\\d+\\.\\d+\\.\\d+)$"
                     }
                 }
             ],
-            "subdir": "cpp"
+            "modules": [
+                {
+                    "name": "GTest",
+                    "buildsystem": "cmake-ninja",
+                    "cleanup": [
+                        "*"
+                    ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/google/googletest.git",
+                            "tag": "v1.18.0",
+                            "commit": "063de7e9578f82b369302001269680b4b1553359",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^v([\\d.]+)$"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "protobuf",
+                    "buildsystem": "cmake-ninja",
+                    "config-opts": [
+                        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+                        "-DCMAKE_SHARED_LINKER_FLAGS='-Wl,--copy-dt-needed-entries'",
+                        "-DCMAKE_STATIC_LINKER_FLAGS='-Wl,--copy-dt-needed-entries'",
+                        "-Dprotobuf_LOCAL_DEPENDENCIES_ONLY=ON",
+                        "-Dprotobuf_BUILD_SHARED_LIBS=ON",
+                        "-Dprotobuf_BUILD_TESTS=OFF"
+                    ],
+                    "cleanup": [
+                        "/bin",
+                        "/doc",
+                        "/lib/plugins"
+                    ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/protocolbuffers/protobuf.git",
+                            "tag": "v36.2",
+                            "commit": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^v([\\d.]+)$"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "libical",
