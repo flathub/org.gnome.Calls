@@ -139,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/google/libphonenumber.git",
-                    "tag": "v9.0.39",
-                    "commit": "670015c8aec4c3a84769c664f194677201236b43",
+                    "tag": "v9.0.40",
+                    "commit": "9d77a67180fc7d342bf04da469968501317bbc91",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -390,8 +390,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/Phosh/gmobile.git",
-                    "tag": "v0.7.3",
-                    "commit": "d1b0e693807c2c2de8ab34b43060625c6d89d636",
+                    "tag": "v0.7.4",
+                    "commit": "8996c042b573823dfa4ec2cb9f9fd8267f3543c6",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
