@@ -350,8 +350,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/freeswitch/sofia-sip.git",
-                    "tag": "v1.13.18",
-                    "commit": "ad36ac8f755308e8b87f98a505e83d4e408e5cc3",
+                    "tag": "v1.13.19",
+                    "commit": "6dce59d35535e6dd3945c7b0f76dbf1ba884202d",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
