@@ -366,8 +366,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info.git",
-                    "tag": "20251101",
-                    "commit": "18cb97517d9c831e1d2ec057e62d04fd3665e10f",
+                    "tag": "20261111",
+                    "commit": "31d5240cc4712f615813aa2bb550244079a61f13",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^(\\d{4}(?:0\\d|1[012])(?:[012]\\d|3[01]))$"
